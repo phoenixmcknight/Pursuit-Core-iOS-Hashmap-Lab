@@ -42,14 +42,14 @@ class DictionaryLabTests: XCTestCase {
     }
     
     func testUniqueValues() {
-        XCTAssertEqual(uniqueValues(in: ["hey", "there", "hey", "there", "hay"]), ["hey", "there", "hay"])
+        XCTAssertEqual(uniqueValues(in: ["hey", "there", "hey", "there", "hay"]), [ "hay"])
         XCTAssertEqual(uniqueValues(in: ["Eveything", "is", "unique", "here"]), ["Eveything", "is", "unique", "here"])
-        XCTAssertEqual(uniqueValues(in: ["a", "aa", "ba", "aa", "bb"]), ["a", "aa", "ba", "bb"])
+        XCTAssertEqual(uniqueValues(in: ["a", "aa", "ba", "aa", "bb"]), ["a",  "ba", "bb"])
     }
     
     func testSortByFrequency() {
         XCTAssertEqual(sortByFrequency(arr: [1,6,3,1,6,1]), [1,1,1,6,6,3])
         XCTAssertEqual(sortByFrequency(arr: [5,4,5,4,5,10]), [5,5,5,4,4,10])
-        XCTAssertEqual(sortByFrequency(arr: [9,3,3,3,4,9]), [3,3,3,4,9,9])
+        XCTAssertEqual(sortByFrequency(arr: [9,3,3,3,4,9]), [3,3,3,9,9,4])
     }
 }
